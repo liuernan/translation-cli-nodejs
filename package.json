@@ -5,5 +5,8 @@
   "main": "xxx",
   "repository": "git@github.com:liuernan/translation-cli-nodejs.git",
   "author": "Jiawei <liujiaweidreamer@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^6.0.0"
+  }
 }

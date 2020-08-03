@@ -1,0 +1,9 @@
+{
+  "name": "translation-cli-nodejs",
+  "version": "0.0.1",
+  "description": "a CLI translation tool in Node.js",
+  "main": "xxx",
+  "repository": "git@github.com:liuernan/translation-cli-nodejs.git",
+  "author": "Jiawei <liujiaweidreamer@gmail.com>",
+  "license": "MIT"
+}

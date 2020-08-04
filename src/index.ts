@@ -8,7 +8,7 @@ const translate = (word) => {
 
   const salt = (new Date).getTime();
   const curtime = Math.round(new Date().getTime() / 1000);
-  const [from, to] = /^a-zA-Z/.test(word) ? ["en", "zh-CHS"] : ["zh-CHS", "en"]; //"zh-CHS" "en"
+  const [from, to] = /[a-zA-Z]/.test(word) ? ["en", "zh-CHS"] : ["zh-CHS", "en"]; //"zh-CHS" "en"
 
   const query: string = querystring.stringify({
     q: word,

@@ -8,4 +8,4 @@ program.version(version);
 
 program.parse(process.argv);
 
-translate(program.args[0]);
+program.args[0] && translate(program.args[0]);

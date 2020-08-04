@@ -29,9 +29,15 @@ const translate = (word) => {
   };
 
   const request = https.request(options, (response: IncomingMessage) => {
+    let chunks: Buffer[] = [];
     response.on("data", (data) => {
-      console.log("chenggongle");
-      process.stdout.write(data);
+      chunks.push(data);
+    });
+
+    response.on("end", () => {
+      const result = JSON.parse(Buffer.concat(chunks).toString());
+      console.log(result);
+      process.exit(Number(result.errorCode));
     });
   });
 
@@ -51,3 +57,4 @@ const truncate = (q) => {
   if (len <= 20) return q;
   return q.substring(0, 10) + len + q.substring(len - 10, len);
 };
+

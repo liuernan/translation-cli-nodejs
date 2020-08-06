@@ -4,7 +4,7 @@ import * as querystring from "querystring";
 import * as CryptoJS from "crypto-js";
 import {appKey, key} from "./private-key";
 
-const translate = (word) => {
+const translate = (word: string) => {
 
   const salt = (new Date).getTime();
   const curtime = Math.round(new Date().getTime() / 1000);
@@ -61,13 +61,17 @@ export default translate;
 
 
 // helpers
-const truncate = (q) => {
-  const len = q.length;
-  if (len <= 20) return q;
-  return q.substring(0, 10) + len + q.substring(len - 10, len);
+const truncate = (word: string) => {
+  const len = word.length;
+  if (len <= 20) return word;
+  return word.substring(0, 10) + len + word.substring(len - 10, len);
 };
 
-const errors = {
+
+type errotMap = {
+  [key: string]: string
+}
+const errors: errotMap = {
   "101": "缺少必填的参数,首先确保必填参数齐全，然后确认参数书写是否正确。",
   "102": "不支持的语言类型",
   "103": "翻译文本过长",

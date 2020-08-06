@@ -37,7 +37,8 @@ const translate = (word: string) => {
     response.on("end", () => {
       const result = JSON.parse(Buffer.concat(chunks).toString());
       if ("0" === result.errorCode) {
-        console.dir(result);
+        // console.dir(result);
+        console.log(result.translation.join("  "));
       } else {
         if (errors[result.errorCode]) {
           console.error(`接口返回了一个错误: ${errors[result.errorCode]}`);

@@ -52,7 +52,7 @@ var translate = function (word) {
             var result = JSON.parse(Buffer.concat(chunks).toString());
             if ("0" === result.errorCode) {
                 // console.dir(result);
-                console.log(result.translation.join("  "));
+                result.translation && console.log(result.translation.join("  "));
             }
             else {
                 if (errors[result.errorCode]) {

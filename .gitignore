@@ -1,3 +1,5 @@
 /node_modules/
 /.idea/
 /src/private-key.ts
+/dist/private-key.js
+

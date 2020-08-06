@@ -6,6 +6,9 @@
   "bin": {
     "fy": "dist/cli.js"
   },
+  "scripts": {
+    "tsc": "tsc --build tsconfig.json"
+  },
   "repository": "git@github.com:liuernan/translation-cli-nodejs.git",
   "author": "Jiawei <liujiaweidreamer@gmail.com>",
   "license": "MIT",

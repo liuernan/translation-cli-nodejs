@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {Command} from "commander";
-import translate from "./index";
+import translate from "./main";
 
 const {version} = require("../package.json");
 

@@ -76,10 +76,10 @@ const truncate = (word: string) => {
 };
 
 
-type errotMap = {
+type errorMap = {
   [key: string]: string
 }
-const errors: errotMap = {
+const errors: errorMap = {
   "101": "缺少必填的参数,首先确保必填参数齐全，然后确认参数书写是否正确。",
   "102": "不支持的语言类型",
   "103": "翻译文本过长",
